@@ -1,0 +1,270 @@
+=background-paralax($link: 'noted', $opacity: 1)
+	position: relative
+	overflow: hidden
+	&:before
+		background-image: url('../img/'+$link+'.png') 
+		position: absolute
+		content: ''
+		display: block
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		opacity: $opacity
+		background-attachment: fixed
+		background-position: center
+		background-repeat: no-repeat
+$maubut: #00c4c9
+.home-slider
+	.owl-carousel
+		.owl-nav 
+			display: none
+		figure
+			
+		figcaption
+			+pad(2rem 0)
+			height: 100%
+			width: 100%
+			display: flex
+			flex-direction: column
+			justify-content: flex-end
+			align-items: center
+			text-align: center
+		+media-breakpoint-up(md)
+			.owl-nav 
+				display: block
+				position: absolute
+				top: 50%
+				+fz(2rem)
+				text-align: center
+				width: 100%
+				button 
+					+pos(abs, null null 0 null)
+					width: 50px
+					height: 50px
+					background: #000
+					color: #ffffff
+					&.owl-next
+						right: 2rem
+					&.owl-prev
+						left: 2rem
+				&:hover
+					background: $maubut
+			figcaption
+				position: absolute
+				left: 0
+				bottom: 0
+				color: $whites
+				+text-shadow()
+		+media-breakpoint-up(lg)
+			h2
+				+fz(3rem)
+			p 
+				+fz(1.5rem)
+				+lh(2rem)
+.home-news
+	a
+		// +pad(1rem 1rem)
+		display: flex
+		justify-content: center
+		align-items: center
+		text-align: center
+		flex-direction: column
+		text-decoration: none
+		figure
+			img
+				width: 100%
+				height: 100%
+			figcaption
+				h4
+					margin-top: 1rem
+					margin-bottom: 0
+					color: lighten(#000, 30%)
+				time
+					color: lighten(#000, 80%)
+				p
+					padding-top: 1rem
+					max-width: 100%
+					color: lighten(#000, 70%)
+					transition: 0.5s all ease-in-out
+					line-height: 1.2rem
+	+media-breakpoint-up(md)
+		a
+			text-align: left
+			figure
+				display: block
+				.boximg
+					position: relative
+					img
+						filter: grayscale(100%)
+						transition: 0.5s all ease-in-out
+					&:before
+						position: absolute
+						content: ''
+						display: inline-block
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						z-index: 1
+						transition: 0.5s all ease-in-out
+			h4
+				transition: 0.5s all ease-in-out
+			p
+				color: lighten(#000, 60%)
+				transition: 0.5s all ease-in-out
+			&:hover
+				figure
+					.boximg
+						img
+							filter: grayscale(0%)
+						&:before
+							box-shadow: 0 0 0 5px $maubut inset
+					figcaption
+						h4
+							color: $maubut
+						p
+							color: #000
+.home-future
+	+background-paralax(develop, .3)
+	.container
+		padding-bottom: 3rem
+		a
+			text-align: center
+			text-decoration: none
+			color: #000
+			figure
+				transition: 0.5s all ease-in-out
+				i
+					+fz(5rem)
+					+pad(1.5rem null)
+				h4
+					padding-bottom: .5rem
+			figcaption
+				p
+					color: lighten(#000, 50%)
+					line-height: 1.3rem
+					transition: 0.5s all ease-in-out
+			+media-breakpoint-up(md)
+				text-align: left
+				a
+				&:hover
+					figure
+						color: $maubut
+					figcaption
+						p
+							color: #000
+.home-more
+	background-image: url('../img/noted.png')
+	background-position: center
+	background-repeat: no-repeat
+	display: flex
+	justify-content: center
+	align-items: center
+	text-align: center
+	padding-bottom: 5rem
+	.container
+		h4
+			+fz(2rem)
+			color: #fff
+			+pad(5rem 5rem 2rem 5rem)
+		.btn
+			width: 200px
+			height: 50px
+			background: $maubut
+			color: #ffffff
+			font-size: 1.5rem
+			border-radius: 30px
+			font-weight: 700
+.home-filter
+	margin-bottom: 5rem
+	.tab
+		text-align: center
+		align-items: center
+		ul
+			li
+				+pad(.5rem 1rem)
+				border-radius: 40px
+				color: #000000
+				font-weight: 700
+				text-decoration: none
+				list-style: none
+				display: inline-block
+				p
+					text-align: center
+					margin-bottom: 0
+			.active
+				background: $maubut
+				color: #ffffff
+		.cont
+			.row
+				&.item
+					.boximg
+						margin-bottom: 2rem
+					display: none
+					&.active
+						display: flex
+	+media-breakpoint-up(md)
+		display: block
+		.cont
+			position: relative
+			.boximg
+				filter: grayscale(100%)
+				transition: 0.5s all ease-in-out
+				&:before
+					position: absolute
+					content: ''
+					display: inline-block
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					z-index: 1
+					transition: 0.5s all ease-in-out
+				&:hover
+					filter: grayscale(0%)
+					&:before
+						box-shadow: 0 0 0 5px $maubut inset
+.home-guest
+	background-image: url('../img/bg-kh.png')
+	background-position: center
+	background-repeat: repeatx
+	display: flex
+	justify-content: center
+	align-items: center
+	text-align: center
+	padding-bottom: 5rem
+	.container
+		figure
+			margin: 0 0 1rem
+			justify-content: center
+			align-items: center
+			text-align: center
+			flex-direction: column
+			display: flex
+			.boximg
+				overflow: hidden
+				border-radius: 50%
+				position: relative
+				width: 100px
+				height: 100px
+
+				&:before
+					position: absolute
+					content: ''
+					z-index: 1
+					box-shadow: 0 0 0 5px $maubut inset
+					display: inline-block
+					border-radius: 50%
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+			figcaption
+				.cont
+					+pad(2rem null)
+					width: 340px
+				h5 
+					color: $maubut
+				h4
+					font-weight: 700

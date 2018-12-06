@@ -1,0 +1,185 @@
+extends _layout/layout
+
+//- Các giá trị mặc định cho trang web
+block variables
+	- var title = 'Home'
+	- var description = 'Description for home page'
+	- var bodyclass = 'home'
+
+//- Phần khai báo body
+block body
+	section.home-slider
+		.owl-carousel.owl-theme
+			.item
+				figure
+					img.img-ss(src="./img/slider_1.png", alt="")
+				figcaption
+					.container
+						.row
+							.col-md-12
+								h2 Chúng tôi là FullStack Vietnam
+								p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti incidunt ex, autem dignissimos illum aperiam pariatur in explicabo corporis delectus totam! 
+			.item
+				figure
+					img(src="./img/slider_2.png", alt="")
+				figcaption
+					.container
+						.row
+							.col-md-12
+								h2 Chúng tôi là FullStack Vietnam
+								p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti incidunt ex, autem dignissimos illum aperiam pariatur in explicabo corporis delectus totam! 
+	section.home-news.mb-5
+		.container
+			.row
+				.col.mt-5
+					h3 Tin Tức
+			.row
+				.col-sm-6.col-md-4
+					a(href="#")
+						figure
+							.boximg
+								img.img-fluid(src="./img/service_1.png", alt="")
+							figcaption
+								h4 Trung Tâm Đào Tạo ĐCSVN
+								time 06/12/2017
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ratione totam, pariatur fugiat, dolorem natus esse cupiditate aperiam, laborum nostrum architecto voluptas ea ullam aliquam impedit. Perferendis quibusdam non sunt!
+				.col-sm-6.col-md-4
+					a(href="#")
+						figure
+							.boximg
+								img.img-fluid(src="./img/service_2.png", alt="")
+							figcaption
+								h4 Trung Tâm Đào Tạo ĐCSVN
+								time 06/12/2017
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ratione totam, pariatur fugiat, dolorem natus esse cupiditate aperiam, laborum nostrum architecto voluptas ea ullam aliquam impedit. Perferendis quibusdam non sunt!
+				.col-sm-6.col-md-4
+					a(href="#")
+						figure
+							.boximg
+								img.img-fluid(src="./img/service_1.png", alt="")
+							figcaption
+								h4 Trung Tâm Đào Tạo ĐCSVN
+								time 06/12/2017
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ratione totam, pariatur fugiat, dolorem natus esse cupiditate aperiam, laborum nostrum architecto voluptas ea ullam aliquam impedit. Perferendis quibusdam non sunt!
+	section.home-future
+		.container
+			.row
+				.col.mt-5
+					h3 Định Hướng XHCN
+			.row
+				//- -for(x=0;x<4;x++)
+				.col-12.col-sm-6.col-md-3
+					a(href="#")
+						figure
+							i.fa.fa-television(aria-hidden="true")
+							h4 Tầm Nhìn
+							figcaption
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									| Nemo voluptates voluptate vel hic laudantium at culpa possimus odi
+				.col-12.col-sm-6.col-md-3
+					a(href="#")
+						figure
+							i.fa.fa-apple(aria-hidden="true")
+							h4 Tầm Nhìn
+							figcaption
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									| Nemo voluptates voluptate vel hic laudantium at culpa possimus odi
+				.col-12.col-sm-6.col-md-3
+					a(href="#")
+						figure
+							i.fa.fa-university(aria-hidden="true")
+							h4 Tầm Nhìn
+							figcaption
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									| Nemo voluptates voluptate vel hic laudantium at culpa possimus odi
+				.col-12.col-sm-6.col-md-3
+					a(href="#")
+						figure
+							i.fa.fa-file(aria-hidden="true")
+							h4 Tầm Nhìn
+							figcaption
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									| Nemo voluptates voluptate vel hic laudantium at culpa possimus odi
+	section.home-more
+		.container
+			.row
+				.col
+					h4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ullam nulla quia, reprehenderit nemo itaque perspiciatis sapiente laudantium voluptates ad quis illo quo asperiores amet? Culpa, explicabo sit. Ut, iure!
+			.row
+				.col
+					a.btn(href="#") Xem Thêm
+	section.home-filter
+		.container
+			.row
+				.col.mt-5
+					h3 Định Hướng XHCN
+			.row
+				.col
+					.tab
+						ul.filter
+							li.active(data-open="tab1")
+								p Tất cả
+							li(data-open="tab2")
+								p Là Của
+							li(data-open="tab3")
+								p Đảng
+							li(data-open="tab4")
+								p Cộng Sản Việt Nam
+						.cont
+							.row.item.active#tab1
+								.col-md-4
+									.boximg
+										img.img-fluid(src="./img/service_1.png", alt="")
+								.col-md-4
+									.boximg
+										img.img-fluid(src="./img/service_2.png", alt="")
+								.col-md-4
+									.boximg
+										img.img-fluid(src="./img/service_1.png", alt="")
+							.row.item#tab2
+								.col-md-4
+									.boximg
+										img.img-fluid(src="./img/service_1.png", alt="")
+							.row.item#tab3
+								.col-md-4
+									.boximg
+										img.img-fluid(src="./img/service_2.png", alt="")
+								.col-md-4
+									.boximg
+										img.img-fluid(src="./img/service_2.png", alt="")
+							.row.item#tab4
+								.col-md-4
+									.boximg
+										img.img-fluid(src="./img/service_2.png", alt="")
+	section.home-guest
+		.container
+			.row
+				.col
+					h3 Cử Tri Nói
+			.row
+				.col
+					.owl-carousel.owl-theme.owl-loaded
+						.item.owl-dots
+							figure
+								.boximg
+									img(src="./img/kh_1.png", alt="")
+								figcaption
+									.cont
+										.row
+											.col
+												i Hồi còn đi học, Thầy Nguyên thương tui lắm , Thầy đã khai sáng về đường lối của Đảng cho tôi và các bạn trong lớp, 
+												h5 Giảng Viên
+												h4 Cô Giáo Trẻ
+						
+						.item.owl-dots
+							figure
+								.boximg
+									img(src="./img/kh_1.png", alt="")
+								figcaption
+									.cont
+										.row
+											.col
+												i Hồi còn đi học, Thầy Nguyên thương tui lắm , Thầy đã khai sáng về đường lối của Đảng cho tôi và các bạn trong lớp, 
+												h5 Giảng Viên
+												h4 Cô Giáo Trẻ
+						
