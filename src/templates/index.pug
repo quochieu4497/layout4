@@ -11,27 +11,26 @@ block body
 	section.home-slider
 		.owl-carousel.owl-theme
 			.item
-				figure
-					img.img-ss(src="./img/slider_1.png", alt="")
-				figcaption
+				img(src="./img/slider_1.png", alt="")
+				.title
 					.container
 						.row
-							.col-md-12
-								h2 Chúng tôi là FullStack Vietnam
+							.col-md-8.offset-md-2
+								h1 Chúng tôi là FullStack Vietnam
 								p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti incidunt ex, autem dignissimos illum aperiam pariatur in explicabo corporis delectus totam! 
 			.item
-				figure
-					img(src="./img/slider_2.png", alt="")
-				figcaption
+				img(src="./img/slider_2.png", alt="")
+				.title
 					.container
 						.row
-							.col-md-12
-								h2 Chúng tôi là FullStack Vietnam
+							.col-md-8.offset-md-2
+								h1 Chúng tôi là FullStack Vietnam
 								p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti incidunt ex, autem dignissimos illum aperiam pariatur in explicabo corporis delectus totam! 
+			
 	section.home-news.mb-5
 		.container
 			.row
-				.col.mt-5
+				.col
 					h3 Tin Tức
 			.row
 				.col-sm-6.col-md-4
@@ -64,7 +63,7 @@ block body
 	section.home-future
 		.container
 			.row
-				.col.mt-5
+				.col
 					h3 Định Hướng XHCN
 			.row
 				//- -for(x=0;x<4;x++)
@@ -74,36 +73,52 @@ block body
 							i.fa.fa-television(aria-hidden="true")
 							h4 Tầm Nhìn
 							figcaption
-								p Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									| Nemo voluptates voluptate vel hic laudantium at culpa possimus odi
+								p Cam kết chất lượng sản phẩm cao nhất
+									br
+									|Luôn đặt chữ tín lên hàng đầu
+									br
+									|Lấy lợi ích của khách hàng làm trung tâm hoạt động
+									
 				.col-12.col-sm-6.col-md-3
 					a(href="#")
 						figure
 							i.fa.fa-apple(aria-hidden="true")
 							h4 Tầm Nhìn
 							figcaption
-								p Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									| Nemo voluptates voluptate vel hic laudantium at culpa possimus odi
+								p Cam kết chất lượng sản phẩm cao nhất
+									br
+									|Luôn đặt chữ tín lên hàng đầu
+									br
+									|Lấy lợi ích của khách hàng làm trung tâm hoạt động
+									
 				.col-12.col-sm-6.col-md-3
 					a(href="#")
 						figure
 							i.fa.fa-university(aria-hidden="true")
 							h4 Tầm Nhìn
 							figcaption
-								p Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									| Nemo voluptates voluptate vel hic laudantium at culpa possimus odi
+								p Cam kết chất lượng sản phẩm cao nhất
+									br
+									|Luôn đặt chữ tín lên hàng đầu
+									br
+									|Lấy lợi ích của khách hàng làm trung tâm hoạt động
+									
 				.col-12.col-sm-6.col-md-3
 					a(href="#")
 						figure
 							i.fa.fa-file(aria-hidden="true")
 							h4 Tầm Nhìn
 							figcaption
-								p Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									| Nemo voluptates voluptate vel hic laudantium at culpa possimus odi
+								p Cam kết chất lượng sản phẩm cao nhất
+									br
+									|Luôn đặt chữ tín lên hàng đầu
+									br
+									|Lấy lợi ích của khách hàng làm trung tâm hoạt động
+									
 	section.home-more
 		.container
 			.row
-				.col
+				.col.offset-md-1.col-md-10
 					h4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ullam nulla quia, reprehenderit nemo itaque perspiciatis sapiente laudantium voluptates ad quis illo quo asperiores amet? Culpa, explicabo sit. Ut, iure!
 			.row
 				.col
@@ -111,20 +126,20 @@ block body
 	section.home-filter
 		.container
 			.row
-				.col.mt-5
+				.col
 					h3 Định Hướng XHCN
 			.row
 				.col
 					.tab
 						ul.filter
 							li.active(data-open="tab1")
-								p Tất cả
+									p Tất cả
 							li(data-open="tab2")
-								p Là Của
+									p Là Của
 							li(data-open="tab3")
-								p Đảng
+									p Đảng
 							li(data-open="tab4")
-								p Cộng Sản Việt Nam
+									p Cộng Sản Việt Nam
 						.cont
 							.row.item.active#tab1
 								.col-md-4
@@ -167,8 +182,8 @@ block body
 									.cont
 										.row
 											.col
-												i Hồi còn đi học, Thầy Nguyên thương tui lắm , Thầy đã khai sáng về đường lối của Đảng cho tôi và các bạn trong lớp, 
-												h5 Giảng Viên
+												i Khi còn chưa theo đuổi đam mê làm Idol của mình, Tôi đã theo chân Thầy Nguyên đi muôn nơi. ahihi 
+												h5.mt-4 Japanese Idol
 												h4 Cô Giáo Trẻ
 						
 						.item.owl-dots
@@ -179,7 +194,27 @@ block body
 									.cont
 										.row
 											.col
-												i Hồi còn đi học, Thầy Nguyên thương tui lắm , Thầy đã khai sáng về đường lối của Đảng cho tôi và các bạn trong lớp, 
-												h5 Giảng Viên
+												i Khi còn chưa theo đuổi đam mê làm Idol của mình, Tôi đã theo chân Thầy Nguyên đi muôn nơi. ahihi 
+												h5.mt-4 Japanese Idol
 												h4 Cô Giáo Trẻ
-						
+	section.home-client
+		.container
+			.owl-carousel.owl-theme
+				.item
+					img(src="./img/clients_1.png", alt="")
+				.item
+					img(src="./img/clients_2.png", alt="")
+				.item
+					img(src="./img/clients_3.png", alt="")
+				.item
+					img(src="./img/clients_4.png", alt="")
+				.item
+					img(src="./img/clients_5.png", alt="")
+				.item
+					img(src="./img/clients_6.png", alt="")
+				.item
+					img(src="./img/clients_4.png", alt="")
+				.item
+					img(src="./img/clients_5.png", alt="")
+				.item
+					img(src="./img/clients_3.png", alt="")
